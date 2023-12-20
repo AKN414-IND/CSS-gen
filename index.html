@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient CSS Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div id="colorPickerContainer" class="color-picker-container">
+                <!-- Color pickers will be dynamically added here -->
+            </div>
+            <button id="addColor" class="button add-color">+</button>
+
+            <div class="selector-container">
+                <label for="gradientType">TYPE</label>
+                <select id="gradientType" class="gradient-type">
+                    <option value="linear">Linear</option>
+                    <option value="radial">Radial</option>
+                </select>
+            </div>
+
+            <div id="linearOptions" class="selector-container">
+                <label for="linearDirection">DIRECTION</label>
+                <select id="linearDirection" class="gradient-direction">
+                    <!-- Corrected values for linear gradient directions -->
+                    <option value="to bottom">To Bottom</option>
+                    <option value="to top">To Top</option>
+                    <option value="to right">To Right</option>
+                    <option value="to left">To Left</option>
+                    <option value="to bottom right">To Bottom Right</option>
+                    <option value="to bottom left">To Bottom Left</option>
+                    <option value="to top right">To Top Right</option>
+                    <option value="to top left">To Top Left</option>
+                    
+                </select>
+                
+            </div>
+
+            <div id="radialOptions" class="selector-container" style="display: none;">
+                <label for="radialShape">SHAPE</label>
+                <select id="radialShape" class="gradient-shape">
+                    <option value="circle">Circle</option>
+                    <option value="ellipse">Ellipse</option>
+                </select>
+
+                <label for="radialSize">SIZE</label>
+                <select id="radialSize" class="gradient-size">
+                    <option value="closest-side">Closest-side</option>
+                    <option value="farthest-corner">Farthest-corner</option>
+                    <option value="closest-corner">Closest-corner</option>
+                    <option value="farthest-side">Farthest-side</option>
+                    <option value="contain">Contain</option>
+                    <option value="cover">Cover</option>
+                </select>
+
+                <label for="radialPosition">POSITION</label>
+                <select id="radialPosition" class="gradient-position">
+                    <option value="at center">At Center</option>
+                    <option value="at top">At Top</option>
+                    <option value="at top right">At Top Right</option>
+                    <option value="at right">At Right</option>
+                    <option value="at bottom right">At Bottom Right</option>
+                    <option value="at bottom">At Bottom</option>
+                    <option value="at bottom left">At Bottom Left</option>
+                    <option value="at left">At Left</option>
+                    <option value="at top left">At Top Left</option>
+                    <option value="at center top">At Center Top</option>
+                    <option value="at center right">At Center Right</option>
+                    <option value="at center bottom">At Center Bottom</option>
+                    <option value="at center left">At Center Left</option>
+                    <option value="at left top">At Left Top</option>
+                    <option value="at right top">At Right Top</option>
+                    <option value="at right bottom">At Right Bottom</option>
+                    <option value="at left bottom">At Left Bottom</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h1>Gradient CSS</h1>
+            <div id="gradientBox" class="gradient-box"></div>
+            <button id="copyCss" class="button copy-css">Copy CSS</button>
+            <textarea id="cssCode" readonly></textarea>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
